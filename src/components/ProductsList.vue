@@ -2,8 +2,6 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 
-import { RouterLink } from "vue-router";
-
 interface Product {
   id: number;
   name: string;
@@ -15,7 +13,7 @@ const isLoading = ref<boolean>(true);
 const error = ref<string | null>(null);
 
 const fetchProducts = async () => {
-    const api_url = "http://127.0.0.1:8000/products";
+    const api_url = "http://backend:8081/products";
   // const api_url = "http://0.0.0.0:8081/products";
   isLoading.value = true;
   error.value = null;
@@ -44,9 +42,10 @@ onMounted(() => {
 <template>
   <div>
     <h3>รายการสินค้า</h3>
-    <!-- <div class="header-controls">
-      <RouterLink to="/add-product" class="add-button">เพิ่มสินค้า</RouterLink>
-    </div> -->
+    <router-link to="/add-product">
+      <button>Add Product</button>
+    </router-link>
+    <!-- <button @click="$router.push('/add-product')">Add Product</button> -->
     <div v-if="isLoading">กำลังโหลดข้อมูล</div>
     <div v-else-if="error" class="error-message">
       {{ error }}

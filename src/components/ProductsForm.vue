@@ -21,7 +21,7 @@ const handleSubmit = async () => {
         return;
     }
 
-    const api_url = "http://127.0.0.1:8000/products";
+    const api_url = "http://127.0.0.1:8081/products";
     submitStatus.value = 'loading';
     errorMessage.value = null;
 

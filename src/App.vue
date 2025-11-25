@@ -1,22 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import ProductsList from './components/ProductsList.vue'
-import ProductsForm from './components/ProductsForm.vue';
-
+  import ProductsList from './components/ProductsList.vue';
 </script>
 
 <template>
-  <!-- <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div> -->
-<!-- <HelloWorld msg="Vite + Vue" /> -->
- <!-- <div><h1>Test</h1></div>  -->
-<ProductsList />
+  <!-- <router-link to="/">Products</router-link>
+  <router-link to="/add-product">Add Products</router-link> -->
+
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
