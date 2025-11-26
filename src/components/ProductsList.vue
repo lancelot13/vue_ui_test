@@ -13,7 +13,7 @@ const isLoading = ref<boolean>(true);
 const error = ref<string | null>(null);
 
 const fetchProducts = async () => {
-    const api_url = "http://backend:8081/products";
+    const api_url = "http://localhost:8081/products";
   // const api_url = "http://0.0.0.0:8081/products";
   isLoading.value = true;
   error.value = null;
